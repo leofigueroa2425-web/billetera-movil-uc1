@@ -35,7 +35,7 @@ enum class WalletOperation(val title: String, val subtitle: String, val symbol: 
     Service("Pagar servicios", "Luz, agua e internet", BankSymbol.Service, "Pago realizado")
 }
 
-fun money(value: Double): String = "S/ " + NumberFormat.getNumberInstance(Locale("es", "PE")).apply {
+fun money(value: Double): String = "$ " + NumberFormat.getNumberInstance(Locale("es", "PE")).apply {
     minimumFractionDigits = 2; maximumFractionDigits = 2
 }.format(value)
 
