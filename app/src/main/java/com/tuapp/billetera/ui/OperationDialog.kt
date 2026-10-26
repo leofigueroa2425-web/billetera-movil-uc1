@@ -59,7 +59,7 @@ fun OperationDialog(operation: WalletOperation, state: WalletState, onDismiss: (
                     }
                 }
             }
-            OutlinedTextField(value=amount,onValueChange={amount=it},label={Text("Monto (S/)")},placeholder={Text("0,00")},
+            OutlinedTextField(value=amount,onValueChange={amount=it},label={Text("Monto ($)")},placeholder={Text("0,00")},
                 singleLine=true,enabled=!state.busy,modifier=Modifier.fillMaxWidth(),shape=RoundedCornerShape(12.dp),
                 keyboardOptions=KeyboardOptions(keyboardType=KeyboardType.Decimal),isError=attempted&&amountError!=null,
                 supportingText={if(attempted&&amountError!=null) Text(amountError)})
