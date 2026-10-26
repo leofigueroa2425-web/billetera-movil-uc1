@@ -154,7 +154,7 @@ private fun BalanceCard(balance: Double, account: String, connection: String, hi
             Spacer(Modifier.height(24.dp))
             Text("Saldo disponible",color=Color.White.copy(alpha=.75f),style=MaterialTheme.typography.bodyMedium)
             Row(verticalAlignment=Alignment.CenterVertically) {
-                Text(if(hidden) "S/ ••••••" else money(balance),color=Color.White,style=MaterialTheme.typography.headlineLarge,fontWeight=FontWeight.Bold,modifier=Modifier.weight(1f))
+                Text(if(hidden) "$ ••••••" else money(balance),color=Color.White,style=MaterialTheme.typography.headlineLarge,fontWeight=FontWeight.Bold,modifier=Modifier.weight(1f))
                 IconButton(onClick=onToggle) {BankIcon(if(hidden) BankSymbol.Hidden else BankSymbol.Eye,tint=Color.White,description=if(hidden) "Mostrar saldo" else "Ocultar saldo")}
             }
             Spacer(Modifier.height(20.dp))
